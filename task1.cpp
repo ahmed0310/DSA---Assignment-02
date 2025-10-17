@@ -12,7 +12,7 @@ int main()
     s.Push(20);
     s.Push(30);
 
-    cout << endl << "op element: ";
+    cout << endl << "Top element: ";
     if (s.Top(value))
         cout << value << endl;
     else
