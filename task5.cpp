@@ -218,10 +218,9 @@ bool DoublyLinkedList::isPalindrome() {
 
 bool DoublyLinkedList::RecursivePalindromeCheck(Node* left, Node* right) {
     if (left == nullptr || right == nullptr) return true;
-    if (left == right || left->prev == right) return true; // Base case
-
     if (left->data != right->data) return false;
-
+    if (left == right || left->prev == right) return true; // Base case
+    
     return RecursivePalindromeCheck(left->next, right->prev);
 }
 
