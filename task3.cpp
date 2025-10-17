@@ -24,83 +24,84 @@ public:
     bool Front(T &value) const;
     bool Rear(T &value) const;
     void Display() const;
+    int RecursiveSearch(T& value, int index = 0);
 };
 
-int main() {
-    Deque<int> dq(5);
-    int choice, value;
-    bool success;
+// int main() {
+//     Deque<int> dq(5);
+//     int choice, value;
+//     bool success;
 
-    do {
-        cout << endl << "----- DEQUE MENU -----" << endl;
-        cout << "1. Enqueue at Front" << endl;
-        cout << "2. Enqueue at Rear" << endl;
-        cout << "3. Dequeue from Front" << endl;
-        cout << "4. Dequeue from Rear" << endl;
-        cout << "5. View Front" << endl;
-        cout << "6. View Rear" << endl;
-        cout << "7. Display Deque" << endl;
-        cout << "8. Exit" << endl;
-        cout << "Enter your choice: ";
-        cin >> choice;
+//     do {
+//         cout << endl << "----- DEQUE MENU -----" << endl;
+//         cout << "1. Enqueue at Front" << endl;
+//         cout << "2. Enqueue at Rear" << endl;
+//         cout << "3. Dequeue from Front" << endl;
+//         cout << "4. Dequeue from Rear" << endl;
+//         cout << "5. View Front" << endl;
+//         cout << "6. View Rear" << endl;
+//         cout << "7. Display Deque" << endl;
+//         cout << "8. Exit" << endl;
+//         cout << "Enter your choice: ";
+//         cin >> choice;
 
-        switch (choice) {
-        case 1:
-            cout << "Enter value: ";
-            cin >> value;
-            success = dq.EnqueueAtFront(value);
-            dq.Display();
-            break;
+//         switch (choice) {
+//         case 1:
+//             cout << "Enter value: ";
+//             cin >> value;
+//             success = dq.EnqueueAtFront(value);
+//             dq.Display();
+//             break;
 
-        case 2:
-            cout << "Enter value: ";
-            cin >> value;
-            success = dq.EnqueueAtRear(value);
-            dq.Display();
-            break;
+//         case 2:
+//             cout << "Enter value: ";
+//             cin >> value;
+//             success = dq.EnqueueAtRear(value);
+//             dq.Display();
+//             break;
 
-        case 3:
-            success = dq.DequeueFront(value);
-            if (success)
-                cout << "Deleted: " << value << endl;
-            dq.Display();
-            break;
+//         case 3:
+//             success = dq.DequeueFront(value);
+//             if (success)
+//                 cout << "Deleted: " << value << endl;
+//             dq.Display();
+//             break;
 
-        case 4:
-            success = dq.DequeueRear(value);
-            if (success)
-                cout << "Deleted: " << value << endl;
-            dq.Display();
-            break;
+//         case 4:
+//             success = dq.DequeueRear(value);
+//             if (success)
+//                 cout << "Deleted: " << value << endl;
+//             dq.Display();
+//             break;
 
-        case 5:
-            success = dq.Front(value);
-            if (success)
-                cout << "Front element: " << value << endl;
-            break;
+//         case 5:
+//             success = dq.Front(value);
+//             if (success)
+//                 cout << "Front element: " << value << endl;
+//             break;
 
-        case 6:
-            success = dq.Rear(value);
-            if (success)
-                cout << "Rear element: " << value << endl;
-            break;
+//         case 6:
+//             success = dq.Rear(value);
+//             if (success)
+//                 cout << "Rear element: " << value << endl;
+//             break;
 
-        case 7:
-            dq.Display();
-            break;
+//         case 7:
+//             dq.Display();
+//             break;
 
-        case 8:
-            cout << "Exiting program." << endl;
-            break;
+//         case 8:
+//             cout << "Exiting program." << endl;
+//             break;
 
-        default:
-            cout << "Invalid choice! Try again." << endl;
-        }
+//         default:
+//             cout << "Invalid choice! Try again." << endl;
+//         }
 
-    } while (choice != 8);
+//     } while (choice != 8);
 
-    return 0;
-}
+//     return 0;
+// }
 
 
 // ---------------- Deque Class Implementation ----------------

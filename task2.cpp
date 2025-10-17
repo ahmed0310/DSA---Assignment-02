@@ -8,7 +8,7 @@ using namespace std;
 class Box
 {
     static int uniqueTrackingIdGenerator;
-
+    
 public:
     float netWeight;
     int sourceCode;
